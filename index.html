@@ -12,9 +12,24 @@
       padding: 20px;
     }
 
-    h2 {
-      margin-bottom: 20px;
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
     }
+
+    .logo {
+        max-width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+
 
     .task-row {
       display: flex;
@@ -146,21 +161,23 @@
   </style>
 </head>
 <body>
-
-  <h2>إدخال بيانات المهام</h2>
-
+  <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h2>المهام المطلوبة من سعادتكم</h2>
+  </div>
+      
   <div id="tasksContainer">
     <div class="task-row">
       <div class="input-box">
-        <div class="label">الموضوع</div>
+        <div class="label">الموضوع:</div>
         <textarea placeholder=" أدخل الموضوع بحيث لا يتجاوز 50 حرف" oninput="autoExpand(this)"></textarea>
       </div>
       <div class="input-box">
-        <div class="label">آخر تحديث</div>
+        <div class="label">آخر تحديث:</div>
         <textarea placeholder="أدخل آخر تحديث على المهمة" oninput="autoExpand(this)"></textarea>
       </div>
       <div class="input-box">
-        <div class="label">النتيجة</div>
+        <div class="label">النتيجة:</div>
         <textarea placeholder="أدخل النتيجة التي تم التوصل لها" oninput="autoExpand(this)"></textarea>
       </div>
     </div>
