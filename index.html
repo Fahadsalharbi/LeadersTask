@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta id="viewportMeta" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مهام القادة</title>
   <style>
     body {
@@ -203,6 +204,12 @@
     window.onbeforeprint = () => {
   document.querySelectorAll('textarea').forEach(autoExpand);
     };
+
+    window.addEventListener('load', function () {
+    if (window.innerWidth <= 768) {
+      document.getElementById('viewportMeta').setAttribute('content', 'width=device-width, initial-scale=2.0');
+    }
+  });
 
   </script>
 
